@@ -1,0 +1,10 @@
+# Mengabaikan folder dependencies Node.js
+backend/node_modules/
+
+# Mengabaikan file database (jangan upload data user ke publik)
+backend/data/
+database.sqlite
+
+# Mengabaikan file sistem operasi
+.DS_Store
+Thumbs.db

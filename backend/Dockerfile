@@ -11,9 +11,6 @@ RUN npm install
 # Copy seluruh kode backend
 COPY . .
 
-# Buat folder untuk database SQLite
-RUN mkdir -p data
-
 # Expose port 3000
 EXPOSE 3000
 

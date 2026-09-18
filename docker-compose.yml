@@ -5,25 +5,20 @@ services:
     build: ./backend
     ports:
       - "3000:3000"
-    volumes:
-      - sqlite_data:/app/data  # Menyimpan data database agar permanen
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
     networks:
       - app-network
 
   frontend:
     build: ./frontend
     ports:
-      - "8080:80" # Akses frontend di localhost:8080, diteruskan ke port 80 di container
+      - "8080:80"
     depends_on:
       - backend
     networks:
       - app-network
 
-# Setup Docker Volume untuk Database SQLite
-volumes:
-  sqlite_data:
-
-# Setup Network agar container bisa saling ngobrol
 networks:
   app-network:
     driver: bridge

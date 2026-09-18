@@ -8,3 +8,4 @@ database.sqlite
 # Mengabaikan file sistem operasi
 .DS_Store
 Thumbs.db
+.env
